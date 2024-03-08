@@ -1,10 +1,11 @@
+
 import Image from 'next/image'
 import PrinticalT2 from '/public/Printical_T2.svg'
 import PrinticalT4 from '/public/Printical_T4.svg'
 import Placeholder from '/public/Placeholder.jpg'
 import OpenForm from './openform.js'
 import Link from 'next/link'
-import Viewer from './stlviewer.js'
+import ModelForm from './modelform'
 
 
 function Showcase() {
@@ -54,7 +55,7 @@ export default function Home() {
           <Showcase/>
         </section>
         <section id="upload">
-          <Viewer/>
+          <ModelForm/>
         </section>
         <section id="form">
           <OpenForm/>
