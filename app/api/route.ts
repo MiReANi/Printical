@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { mailOptions, transporter} from "./nodemailer.js";
 
 type Feedback = {
     name?: string,
@@ -9,13 +10,21 @@ export async function POST(request: Request){
     
     const data: Feedback = await request.json();
     console.log('data: ', data);
-
     const {name, email } = data;
-    return NextResponse.json({name, email });
+
+    try {
+        await transporter.sendMail({
+            ...mailOptions,
+            subject: "Uusi tilaus",
+            text: "This is a test string",
+            html: "Lähettäjä: " + name + "<br></br>" + email,
+        });
+        
+        return NextResponse.json({success: true}, {status: 200});
+    } catch(error) {
+        console.log(error);
+        return NextResponse.json({error: 'Error'}, {status: 400});
+    }
+    //const {name, email } = data;
+    //return NextResponse.json({name, email });
 }
-
-
-/*export default function handler(req, res) {
-    console.log(req.body);
-    res.status(200).json({name: 'John Doe'})
-}*/
