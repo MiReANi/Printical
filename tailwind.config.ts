@@ -14,6 +14,9 @@ const config: Config = {
       white: '#ffffff'
     },
     extend: {
+      backgroundImage: {
+        'printicalBG': "url('/printicalbg.png')"
+      }
     },
   },
   plugins: [],

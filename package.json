@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "3": "^2.1.0",
     "filepond": "^4.30.6",
-    "next": "14.0.4",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.4",
+    "next": "^15.0.3",
     "nodemailer": "^6.9.12",
-    "react": "^18",
-    "react-dom": "^18",
+    "oracledb": "^6.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-dropzone": "^14.2.3",
     "react-filepond": "^7.1.2",
     "react-stl-viewer": "^2.5.0",
+    "sqlite": "^5.1.1",
     "three": "^0.160.1"
   },
   "devDependencies": {
@@ -24,7 +29,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/three": "^0.160.0",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "postcss": "^8.4.33",
