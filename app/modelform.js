@@ -3,7 +3,7 @@
 import React, {useCallback, useState} from 'react'
 import {useDropzone} from 'react-dropzone'
 
-const initValues = {name: "", email: ""}
+const initValues = {name: "", email: "", phone: "", freeWord: ""}
 
 const initState = {values: initValues}
 
@@ -41,6 +41,7 @@ export default function ModelForm(){
   })
 
     const result = await res.json();
+    setState(initState)
     console.log(result);
   };
 
@@ -53,9 +54,14 @@ export default function ModelForm(){
 
   return (
     <form onSubmit={onSubmit}>
-      <input type="text" name="name" value={values.name} onChange={handleChange}/>
-      <input type="email" name="email" value={values.email} onChange={handleChange}/>
-
+      <p>Nimi</p>
+      <input type="text" name="name" value={values.name} onChange={handleChange} required/>
+      <p>Sähköposti</p>
+      <input type="email" name="email" value={values.email} onChange={handleChange} required/>
+      <p>Puhelin</p>
+      <input type="phone" name="phone" value={values.phone} onChange={handleChange}/>
+      <p>Tilaustiedot</p>
+      <input type="text" name="freeWord" value={values.freeWord} onChange={handleChange} required/>
       <button>Submit</button>
     </form>
   )

@@ -4,20 +4,22 @@ import { mailOptions, transporter} from "./nodemailer.js";
 type Feedback = {
     name?: string,
     email?: string,
+    phone?: string,
+    freeWord?: string
 }
 
 export async function POST(request: Request){
     
     const data: Feedback = await request.json();
     console.log('data: ', data);
-    const {name, email } = data;
+    const {name, email, phone, freeWord } = data;
 
     try {
         await transporter.sendMail({
             ...mailOptions,
             subject: "Uusi tilaus",
             text: "This is a test string",
-            html: "Lähettäjä: " + name + "<br></br>" + email,
+            html: "Lähettäjä: " + name + "<br></br>" + email + "<br></br>" + phone + "<br></br>" + freeWord,
         });
         
         return NextResponse.json({success: true}, {status: 200});
