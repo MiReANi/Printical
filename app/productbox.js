@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Clorox from '/public/clorox.png'
 import { useState } from 'react';
+import Link from 'next/link'
 
 //const startingProducts = {
  let productlist = [
@@ -46,6 +47,10 @@ export default function ProductBox(){
         <div className="columns-4">
             {products.map(product => (
                 <div key={product.id}>
+                    <Link
+                        href={{
+                            pathname: '/productpage/'
+                        }}/>
                     <Image src={product.image} alt={product.alt}/>
                    <div className='w-full absolute bottom-0'>
                         <h2 className='text-2xl text-left ml-5'>{product.name}</h2>

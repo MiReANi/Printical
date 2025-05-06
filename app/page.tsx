@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import Placeholder from '/public/Placeholder.jpg'
+import Placeholder from '/public/ruukutxd.jpg'
 import HeaderPNG from '/public/png_osat/yläpalkki.png'
 import Logo from '/public/png_osat/logo.png'
 import ModelForm from './modelform'
@@ -55,20 +55,26 @@ export default function Home() {
           <section id="header">
               <Nav/>
           </section>
-          <div className='mx-20 mt-20 flex flex-col space-y-5'>
-            <section id="showcase">
+          <div className='mx-20 mt-20 flex flex-col space-y-5 p-20'>
+            <section className='p-10' id="showcase">
               <Showcase/>
             </section>
-            <section id="products">
+            <section className='p-10' id="products">
               <ProductBox/>
             </section>
-            <section id="upload">
+            <section id="empty">
+              <div className='p-20'></div>
+            </section>
+            <section className='p-10' id="upload">
               <ModelForm/>
             </section>
-            <section id="form">
+            <section className='p-10' id="form">
               {/*<ProductManager/>*/}
             </section>
-            <section id="contact">
+            <section id="empty">
+              <div className='p-20'></div>
+            </section>
+            <section className='p-10' id="contact">
               <Contact/>
             </section>
           </div>
