@@ -15,7 +15,8 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        'printicalBG': "url('/printicalbg.png')"
+        // vaihda myöhemmin tausta.png
+        'printicalBG': "url('/png_osat/tausta2.png')"
       }
     },
   },
