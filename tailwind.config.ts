@@ -13,10 +13,13 @@ const config: Config = {
       darkblue: '#051019',
       white: '#ffffff'
     },
+    fontFamily: {
+      rubik : ['Rubik', 'sans-serif']
+    },
     extend: {
       backgroundImage: {
         // vaihda myöhemmin tausta.png
-        'printicalBG': "url('/png_osat/tausta2.png')"
+        'printicalBG': "url('/png_osat/tausta.png')"
       }
     },
   },

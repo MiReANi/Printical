@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from 'next/server'
 import mysql from 'mysql2/promise'
-import { GetDBSettings, IDBSettings } from '../../dbaccess'
+import { GetDBSettings, IDBSettings } from '../../src/dbaccess'
 
 let connectionParams = GetDBSettings()
 
@@ -9,7 +9,7 @@ export async function GET(request: Request) {
         const connection = await mysql.createConnection(connectionParams)
 
          let get_exp_query = ''
-          get_exp_query = 'SELECT * FROM tuotteet'
+          get_exp_query = 'SELECT * FROM printicaldb'
 
           let values: any[] = []
 

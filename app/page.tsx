@@ -1,10 +1,10 @@
 'use client'
 import Image from 'next/image'
 import Placeholder from '/public/ruukutxd.jpg'
-import HeaderPNG from '/public/png_osat/yläpalkki.png'
-import Logo from '/public/png_osat/logo.png'
-import ModelForm from './modelform'
+import ModelForm from './components/modelform'
 import ProductBox from './productbox.js'
+import Link from 'next/link'
+import Navbar from './components/navbar'
 
 
 //import ProductManager from './product.js'
@@ -20,14 +20,7 @@ async function Database(){
     </ul>
   )
 }*/
-function Nav() {
-  return(
-    <div className='fixed top-0' >
-      <Image src={HeaderPNG} alt="HeaderPNG"/>
-      <Image className='absolute top-4 left-2' src={Logo} alt="PrinticalLogo"/>
-    </div>
-  );
-}
+
 
 function Showcase() {
   return(
@@ -53,26 +46,14 @@ export default function Home() {
 
       <div className='relative'>
           <section id="header">
-              <Nav/>
+              <Navbar/>
           </section>
           <div className='mx-20 mt-20 flex flex-col space-y-5 p-20'>
             <section className='p-10' id="showcase">
               <Showcase/>
             </section>
             <section className='p-10' id="products">
-              <ProductBox/>
-            </section>
-            <section id="empty">
-              <div className='p-20'></div>
-            </section>
-            <section className='p-10' id="upload">
-              <ModelForm/>
-            </section>
-            <section className='p-10' id="form">
-              {/*<ProductManager/>*/}
-            </section>
-            <section id="empty">
-              <div className='p-20'></div>
+              {/*<ProductBox/>*/}
             </section>
             <section className='p-10' id="contact">
               <Contact/>

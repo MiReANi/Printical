@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-printicalBG'>{children}</body>
+      <body className='bg-printicalBG font-rubik tracking-[0.075em]'>{children}</body>
     </html>
   )
 }
