@@ -8,9 +8,9 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      orange: '#f26d0c',
-      blue: '#198cff',
-      darkblue: '#051019',
+      orange: '#ff671aff',
+      blue: '#00aaffff',
+      darkblue: '#020d13ff',
       white: '#ffffff'
     },
     fontFamily: {

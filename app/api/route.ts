@@ -5,6 +5,8 @@ type Feedback = {
     name?: string,
     email?: string,
     phone?: string,
+    yritys?: string,
+    y_tunnus?: string,
     freeWord?: string
 }
 
@@ -12,14 +14,14 @@ export async function POST(request: Request){
     
     const data: Feedback = await request.json();
     console.log('data: ', data);
-    const {name, email, phone, freeWord } = data;
+    const {name, email, phone, yritys, y_tunnus, freeWord } = data;
 
     try {
         await transporter.sendMail({
             ...mailOptions,
-            subject: "Uusi tilaus",
+            subject: "Uusi yhteydenotto",
             text: "This is a test string",
-            html: "Lähettäjä: " + name + "<br></br>" + email + "<br></br>" + phone + "<br></br>" + freeWord,
+            html: "Lähettäjä: " + name + "<br></br>" + email + "<br></br>" + phone + "<br></br>" + yritys + "<br></br>" + y_tunnus + "<br></br>" + freeWord,
         });
         
         return NextResponse.json({success: true}, {status: 200});

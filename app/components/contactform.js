@@ -3,7 +3,7 @@
 import React, {useCallback, useState} from 'react'
 import {useDropzone} from 'react-dropzone'
 
-const initValues = {name: "", email: "", phone: "", freeWord: ""}
+const initValues = {name: "", email: "", phone: "", yritys: "", y_tunnus: "", freeWord: ""}
 
 const initState = {values: initValues}
 
@@ -54,15 +54,25 @@ export default function ModelForm(){
 
   return (
     <form onSubmit={onSubmit}>
-        <p>Viesti</p>
-        <input type="text" name="freeWord" value={values.freeWord} onChange={handleChange} required/>
-        <p>Nimi</p>
-        <input type="text" name="name" value={values.name} onChange={handleChange} required/>
-        <p>Sähköposti</p>
-        <input type="email" name="email" value={values.email} onChange={handleChange} required/>
-        <p>Puhelin</p>
-        <input type="phone" name="phone" value={values.phone} onChange={handleChange}/>
-        <button>Submit</button>
+        <div className='grid grid-cols-2'>
+            <div className='ml-auto mr-10 space-y-1'>
+                <p>Nimi</p>
+                <input type="text" className='rounded-sm w-64 pl-2' name="name" value={values.name} onChange={handleChange} required/>
+                <p>Sähköposti</p>
+                <input type="email" name="email" value={values.email} onChange={handleChange} required/>
+                <p>Puhelin</p>
+                <input type="phone" name="phone" value={values.phone} onChange={handleChange}/>
+                <p>Yritys</p>
+                <input type="yritys" name="yritys" value={values.yritys} onChange={handleChange}/>
+                <p>Y-tunnus</p>
+                <input type="y_tunnus" name="y_tunnus" value={values.y_tunnus} onChange={handleChange}/>
+            </div>
+            <div className='mr-20 space-y-1'>
+                <p>Viesti</p>
+                <textarea type="text" rows={10} className='w-full rounded-sm' name="freeWord" value={values.freeWord} onChange={handleChange} required/>
+            </div>
+        </div>
+        <button className='bg-blue p-4 rounded-lg text-white'>Lähetä</button>
     </form>
   )
 }
