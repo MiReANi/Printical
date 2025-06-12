@@ -54,25 +54,25 @@ export default function ModelForm(){
 
   return (
     <form onSubmit={onSubmit}>
-        <div className='grid grid-cols-2'>
+        <div className='md:grid grid-cols-2'>
             <div className='ml-auto mr-10 space-y-1'>
                 <p>Nimi</p>
-                <input type="text" className='rounded-sm w-64 pl-2' name="name" value={values.name} onChange={handleChange} required/>
+                <input type="text" className='rounded-sm md:w-64 md:pl-2' name="name" value={values.name} onChange={handleChange} required/>
                 <p>Sähköposti</p>
-                <input type="email" name="email" value={values.email} onChange={handleChange} required/>
+                <input type="email" className='rounded-sm md:w-64 md:pl-2' name="email" value={values.email} onChange={handleChange} required/>
                 <p>Puhelin</p>
-                <input type="phone" name="phone" value={values.phone} onChange={handleChange}/>
+                <input type="phone" className='rounded-sm md:w-64 md:pl-2' name="phone" value={values.phone} onChange={handleChange}/>
                 <p>Yritys</p>
-                <input type="yritys" name="yritys" value={values.yritys} onChange={handleChange}/>
+                <input type="yritys" className='rounded-sm md:w-64 md:pl-2' name="yritys" value={values.yritys} onChange={handleChange}/>
                 <p>Y-tunnus</p>
-                <input type="y_tunnus" name="y_tunnus" value={values.y_tunnus} onChange={handleChange}/>
+                <input type="y_tunnus" className='rounded-sm md:w-64 md:pl-2' name="y_tunnus" value={values.y_tunnus} onChange={handleChange}/>
             </div>
-            <div className='mr-20 space-y-1'>
+            <div className='md:mr-20 space-y-1 mt-2 md:mt-0'>
                 <p>Viesti</p>
                 <textarea type="text" rows={10} className='w-full rounded-sm' name="freeWord" value={values.freeWord} onChange={handleChange} required/>
             </div>
         </div>
-        <button className='bg-blue p-4 rounded-lg text-white'>Lähetä</button>
+        <button className='bg-blue p-4 rounded-lg text-white mb-4'>Lähetä</button>
     </form>
   )
 }

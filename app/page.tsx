@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import Placeholder from '/public/ruukutxd.jpg'
+import Placeholder from '/public/printicaltaustakuva.jpg'
 import ModelForm from './components/modelform'
 import ProductBox from './productbox.js'
 import Link from 'next/link'
@@ -25,9 +25,8 @@ async function Database(){
 function Showcase() {
   return(
     <section>
-      <div className='grid grid-cols-5 gap-4'>
-        <Image className='col-span-1' src={Placeholder} alt="Placeholder"/>
-        <Image className='col-span-4' src={Placeholder} alt="Placeholder"/>
+      <div className='mt-20'>
+        <Image className='' src={Placeholder} alt="Placeholder"/>
       </div>
     </section>
   );
@@ -48,13 +47,11 @@ export default function Home() {
           <section id="header">
               <Navbar/>
           </section>
-          <div className='mx-20 mt-20 flex flex-col space-y-5 p-20'>
-            <section className='p-10' id="showcase">
+          <section className='' id="showcase">
               <Showcase/>
-            </section>
-            <section className='p-10' id="products">
-              {/*<ProductBox/>*/}
-            </section>
+          </section>
+          <div className='md:mx-20 mt-20 flex md:flex-col space-y-5 md:p-20'>
+
             <section className='p-10' id="contact">
               <Contact/>
             </section>
