@@ -4,6 +4,7 @@ import Placeholder from '/public/printicaltaustakuva.jpg'
 import ModelForm from './components/modelform'
 import ProductBox from './productbox.js'
 import Link from 'next/link'
+import FrontText from '/public/teksti etusivu.svg'
 import Navbar from './components/navbar'
 
 
@@ -22,39 +23,29 @@ async function Database(){
 }*/
 
 
-function Showcase() {
-  return(
-    <section>
-      <div className='mt-20'>
-        <Image className='' src={Placeholder} alt="Placeholder"/>
-      </div>
-    </section>
-  );
-}
-
-function Contact() {
-  return(
-    <div className='p-20 bg-blue'>
-        <p>Hey guys, did you know that in terms of male human and female Pokémon breeding, Vaporeon is the most compatible Pokémon for humans? Not only are they in the field egg group, which is mostly comprised of mammals, Vaporeon are an average of 3”03’ tall and 63.9 pounds, this means they’re large enough to be able handle human dicks, and with their impressive Base Stats for HP and access to Acid Armor, you can be rough with one. Due to their mostly water based biology, there’s no doubt in my mind that an aroused Vaporeon would be incredibly wet, so wet that you could easily have sex with one for hours without getting sore. They can also learn the moves Attract, Baby-Doll Eyes, Captivate, Charm, and Tail Whip, along with not having fur to hide nipples, so it’d be incredibly easy for one to get you in the mood. With their abilities Water Absorb and Hydration, they can easily recover from fatigue with enough water. No other Pokémon comes close to this level of compatibility. Also, fun fact, if you pull out enough, you can make your Vaporeon turn white. Vaporeon is literally built for human dick. Ungodly defense stat+high HP pool+Acid Armor means it can take cock all day, all shapes and sizes and still come for more</p>
-    </div>
-  );
-}
-
 export default function Home() {
   return (
 
       <div className='relative'>
-          <section id="header">
-              <Navbar/>
-          </section>
-          <section className='' id="showcase">
-              <Showcase/>
-          </section>
-          <div className='md:mx-20 mt-20 flex md:flex-col space-y-5 md:p-20'>
+        <Navbar/>
+        <div className='mt-20'>
+          
+          <Image className='' src={Placeholder} alt="Placeholder"/>
 
-            <section className='p-10' id="contact">
-              <Contact/>
-            </section>
+            <Image className='md:mx-10 md:my-10 absolute md:top-[250px] top-20 md:left-[125px]' src={FrontText} alt='FrontText'/>
+        </div>
+        <div className='mt-20 md:grid grid-cols-2 bg-darkblue text-sm text-white'>
+            <div className='p-5 md:mx-0 md:border-r-4 md:border-b-0 border-b-4 border-blue md:p-20 md:ml-20 md:text-lg/8'>
+              <p>Printical on 3D-tulostamiseen erikoistunut yritys, joka tarjoaa luovia ratkaisuja täysin asiakkaan toiveiden ja tarpeiden mukaan. Pyrimme päivittäin haastamaan itsemme luoden jotain käytännöllistä ja kaunista asiakkaittemme iloksi.</p>
+            </div>
+            <div className='p-5 md:mx-0 md:p-20 md:mr-20 md:text-lg/8'>
+              <p>Kaikki tuotteemme suunnitellaan ja valmistetaan Suomessa mittatilauksena 3D-tulostaen ja käsityönä kooten. Olemme joustava ja innovatiivinen toimija, jonka tuotevalikoiman rajoituksena on ainoastaan sinun mielikuvituksesi!</p>
+            </div>
+            
+            
+
+
+
           </div>
       </div>
 
