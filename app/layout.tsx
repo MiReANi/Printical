@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Footer from './components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-printicalBG font-rubik tracking-[0.075em]'>{children}</body>
+      <body className='bg-printicalBG font-rubik tracking-[0.075em]'>{children}<Footer/></body>
     </html>
   )
 }
