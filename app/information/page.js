@@ -6,6 +6,8 @@ import Figures from 'public/figut.svg'
 import Serial from 'public/sarjat.svg'
 import Special from 'public/erikoisosat.svg'
 import TextPro from 'public/tekstijakuvatuote.svg'
+import Dprint from 'public/3d-tulostin.svg'
+import Corn from 'public/dino ja maissi.svg'
 
 
 export default function Info(){
@@ -22,32 +24,38 @@ export default function Info(){
                     </p>
                 </div>
                 <p className='bg-darkblue text-white mr-auto p-1 font-extrabold ml-10 text-4xl'>EI HÄTÄÄ.</p>
-                <div>
+                <div className='md:grid grid-cols-2'>
                     <p className='my-10'>
                         Me Printicalilla olemme erikoistuneet suunnittelemaan ja tuottamaan laadukkaita ja
                         nopeita ratkaisuja yritysten ja yksityisasiakkaiden erityistarpeisiin. Tuotteet suunnitellaan, valmistetaan ja kootaan kotimaisena työnä aina vastaamaan asiakkaan toiveita ja tuotteen käyttötarkoitusta. Käytämme aina mahdollisuuksien salliessa kasvipohjaista ja biohajoavaa, nopeasti uusiutuvaa PLA-muovia! 
                     </p>
+                    <Image className='md:ml-10' src={Corn} alt='Corn'/>
                 </div>
-                <div className=''>
+                <div className='md:grid grid-cols-2'>
+                    <div>
                         <h1>Mutta mikä ihmeen 3D-tulostus?</h1>
-                        <p className='mt-10'>
+                        <p className='my-10'>
                             3D-tulostus eli "Additive manufacturing" on valmistusmenetelmä, jossa digitaalisesta tiedostosta luodaan valmis tuote pursottamalla ilman fyysistä muottia.
                             Yksittäisen tuotteen valmistaminen on hitaampaa, kuin esimerkiksi ruiskupuristamalla, mutta täysin uuden tuotteen suunnittelu ja valmistaminen voi olla satoja kertoja nopeampaa. 3D-tulostamalla tuote voidaan myös valmistaa monivärisenä ilman erillistä värjäämistä ja saavuttaa kevyitä ja kestäviä rakenteita, jotka on mahdottomia valmistaa muilla menetelmillä.
                         </p>
+                    </div>
+                    <Image className='md:ml-10' src={Dprint} alt='3Dprint'/>
                 </div>
             </div>
-            <div className='md:my-20'>
-                <div className='flex flex-row bg-darkblue justify-center space-x-20 py-10'>
+            <div className='md:my-20 my-10'>
+                <div className='bg-darkblue'>
+                    <div className='flex flex-col md:flex-row md:justify-center md:space-x-20 py-10 mx-5'>
 
-                    <Image src={Proto} alt='Proto'/>
-                    <Image src={Special} alt='Special'/>
-                    <Image className='top-0' src={Serial} alt='Serial'/>
+                        <Image className='mb-10 md:mb-0' src={Proto} alt='Proto'/>
+                        <Image className='mb-10 md:mb-0' src={Special} alt='Special'/>
+                        <Image className='top-0' src={Serial} alt='Serial'/>
 
 
+                    </div>
                 </div>
-                <div className='flex flex-row justify-center space-x-20 py-10'>
-                    <Image src={TextPro} alt='TextPro'/>
-                    <Image src={Gift} alt='Gift'/>
+                <div className='flex flex-col md:flex-row md:justify-center md:space-x-20 py-10 mx-5'>
+                    <Image className='mb-10 md:mb-0' src={TextPro} alt='TextPro'/>
+                    <Image className='mb-10 md:mb-0' src={Gift} alt='Gift'/>
                     <Image src={Figures} alt='Figures'/>
 
                 </div>

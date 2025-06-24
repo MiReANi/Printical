@@ -3,6 +3,7 @@
 import React, {useCallback, useState} from 'react'
 import {useDropzone} from 'react-dropzone'
 
+
 const initValues = {name: "", email: "", phone: "", yritys: "", y_tunnus: "", freeWord: ""}
 
 const initState = {values: initValues}
@@ -14,7 +15,7 @@ const initState = {values: initValues}
 export default function ModelForm(){
   const [state, setState] = useState(initState);
   const {values} = state;
-
+  const [isFormDisabled, setIsFormDisabled] = useState(false);
 
   const handleChange = ({target}) => setState((prev) => ({
     ...prev,
@@ -26,6 +27,7 @@ export default function ModelForm(){
 
   // Nyt se alko toimii jotenkuten, korjaa viel osuus et se tyhjentää tän
   const onSubmit = async (e) => {
+    setIsFormDisabled(true);
     setState((prev) => ({
       ...prev,
       isLoading: true,
@@ -42,6 +44,7 @@ export default function ModelForm(){
 
     const result = await res.json();
     setState(initState)
+    setIsFormDisabled(false);
     console.log(result);
   };
 
@@ -70,9 +73,9 @@ export default function ModelForm(){
             <div className='md:mr-20 space-y-1 mt-2 md:mt-0'>
                 <p>Viesti*</p>
                 <textarea type="text" rows={10} className='w-full rounded-sm' name="freeWord" value={values.freeWord} onChange={handleChange} required/>
+                <button className='disabled:opacity-25 bg-blue p-4 rounded-lg text-white mb-4' disabled={isFormDisabled}>Lähetä</button>
             </div>
         </div>
-        <button className='bg-blue p-4 rounded-lg text-white mb-4'>Lähetä</button>
     </form>
   )
 }
