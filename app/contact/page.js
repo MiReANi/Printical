@@ -3,7 +3,7 @@ import Navbar from '../components/navbar'
 import ContactForm from '../components/contactform'
 import Image from 'next/image'
 import TapioPNG from 'public/tapsa.png'
-import KallePNG from 'public/printical_uus_logo.jpg'
+import KallePNG from 'public/kalle.png'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Contact(){

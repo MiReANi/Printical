@@ -14,9 +14,10 @@ export default function Footer(){
                 <div className='md:ml-10'>
                     <p>Karjalankatu 12</p>
                     <p>28130, Pori</p>
-                    <div className='md:flex flex-row mt-5'>
+                    <div className='flex flex-row my-5 md:mx-5'>
                         <Link href="https://www.instagram.com/printical.fi/"
                         ><Instagram
+                        className='mr-2'
                         size={32}/>
                         </Link>
                         <Link href="https://www.facebook.com/profile.php?id=61574020655204"

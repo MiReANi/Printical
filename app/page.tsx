@@ -13,19 +13,19 @@ export default function Home() {
 
       <div className='relative'>
         <Navbar/>
-        <div className='mt-20'>
+        <div className='md:mt-20 mt-[65px]'>
           
           <Image className='' src={Placeholder} alt="Placeholder"/>
 
             <Image className='md:mx-10 md:my-10 absolute md:top-[250px] top-20 md:left-[125px]' src={FrontText} alt='FrontText'/>
         </div>
-          <div className='flex flex-row justify-center md:mt-10'>
+          <div className='flex flex-row justify-center mx-4 mt-10 md:mt-10'>
             <Link href="/information">
-            <p className='bg-darkblue md:mt-2 text-white p-10 font-extrabold text-6xl'>TIETOA MEISTÄ</p>
+            <p className='bg-darkblue md:mt-2 text-white p-2 md:p-10 font-extrabold md:text-6xl'>TIETOA MEISTÄ</p>
             </Link>
-            <Image className='md:mx-10' src={PrinticalLogo} alt='PrinticalLogo'/>
+            <Image className='md:mx-10 mx-2 md:w-32 w-16' src={PrinticalLogo} alt='PrinticalLogo'/>
             <Link href="/contact">
-            <p className='bg-darkblue md:mt-2 text-white p-10 font-extrabold text-6xl'>OTA YHTEYTTÄ</p>
+            <p className='bg-darkblue md:mt-2 text-white p-2 md:p-10 font-extrabold md:text-6xl'>OTA YHTEYTTÄ</p>
             </Link>
           </div>
           <div className='mt-10 md:grid grid-cols-2 bg-darkblue text-sm text-white border-blue md:border-b-4 md:border-t-4'>
@@ -41,10 +41,20 @@ export default function Home() {
 
 
           </div>
-          <div className='md:grid grid-cols-3'>
+          {/**Desktop */}
+          <div className='hidden md:grid grid-cols-3'>
               <Image src={Skull} alt='Skullplaceholder'/>
-              <Image className='md:mx-12 md:mt-[200px]' src={Materials} alt='Materials'/>
+              <Image className='md:mx-12 md:mt-[200px] my-10' src={Materials} alt='Materials'/>
               <Image src={Skull} alt='Skull'/>
+          </div>
+
+          {/**Mobile */}
+          <div className='md:hidden'>
+            <div className='grid grid-cols-2'>
+              <Image src={Skull} alt='Skullplaceholder'/>
+              <Image src={Skull} alt='Skull'/>
+            </div>
+              <Image className='my-10 w-64 mx-auto' src={Materials} alt='Materials'/>
           </div>
       </div>
 

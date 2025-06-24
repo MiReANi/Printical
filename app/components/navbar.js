@@ -9,36 +9,7 @@ import { useState } from 'react'
 import {Home, CircleUserRound} from 'lucide-react'
 
 export default function Nav() {
-  /*
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
 
-  //Navigation array
-  const navItems = [
-    {name: "Etusivu", href: "/"},
-    {name: "Yhteystiedot", href: "/contact"},
-  ];
-
-  // Mobile Menu
-  <div className={`fixed top-10 left-0 min-h-screen w-64 bg-slate-100 transform transition-transform duration-300 ease-in-out ${
-    isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-  } lg:hidden z-50`}>
-<ul className="flex flex-col h-full gap-4 p-4">
-    {navItems.map((item, index) => (
-      <li
-        key={index}
-        className="flex items-center p-1 text-lg gap-x-2 text-slate-600 hover:text-red-500"
-      >
-        <Link onClick={() => {setIsMobileMenuOpen(false);}} href={item.href} className="flex items-center">
-          {item.name}
-        </Link>
-      </li>
-    ))}
-  </ul>
-</div>
-  */
   return(
     <div className='fixed top-0 right-0 left-0 z-40' >
           
@@ -76,27 +47,35 @@ export default function Nav() {
           {/* Desktop Menu */}
           <div className='hidden lg:block'>
             <Image src={HeaderPNG} alt="HeaderPNG"/>
-            <Link href="/contact"
-            className='md:absolute md:left-[1100px] top-9'>
-            <CircleUserRound
-            size={64}
-            />
-            </Link>
+            <div>
+              <Link href="/contact"
+              className='md:absolute md:left-[1100px] top-7'>
+              <CircleUserRound
+              size={64}
+              className='ml-5'
+              />
+              <p>Yhteystiedot</p>
+              </Link>
+            </div>
+            
             <Link href="/"
-            className='md:absolute md:left-[1000px] top-9'>
+            className='md:absolute md:left-[1000px] top-7'>
             <Home
             size={64}
             />
+            <p>Etusivu</p>
             </Link>
 
             <Link href="/information"
-            className='md:absolute md:left-[1200px] top-9'>
+            className='md:absolute md:left-[1250px] top-8'>
             <Image
             src={AboutUs}
             alt='AboutUs'
             width={61}
             priority
+            className='ml-2'
             />
+            <p>About us</p>
             </Link>
           </div>
           

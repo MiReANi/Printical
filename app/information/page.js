@@ -18,22 +18,23 @@ export default function Info(){
             <div className='mx-5 md:mx-20 mt-20 flex flex-col space-y-5 md:text-lg text-sm'>
                 <div className='mb-10 md:mt-20'>
                     <p>
-                    Onko yritykselläsi kehitteillä uusi tuote?<br/>
-                    Onko muovisen varaosan tilaaminen ulkomailta aivan liian kallista ja hidasta?<br/>
-                    Eikö sopivia liittimiä tai pidikkeitä tahdo löytyä mistään?
+                    Onko yritykselläsi kehitteillä <b>uusi tuote?</b><br/>
+                    Onko muovisen varaosan tilaaminen ulkomailta aivan liian <b>kallista</b> ja <b>hidasta?</b><br/>
+                    Eikö sopivia <b>liittimiä</b> tai <b>pidikkeitä</b> tahdo löytyä <b>mistään</b>?
                     </p>
+                    <p>Tahdotko antaa alusta asti <b>räätälöidyn</b>, täysin <b>uniikin lahjan</b> rakkaallesi?</p>
                 </div>
                 <p className='bg-darkblue text-white mr-auto p-1 font-extrabold ml-10 text-4xl'>EI HÄTÄÄ.</p>
                 <div className='md:grid grid-cols-2'>
                     <p className='my-10'>
-                        Me Printicalilla olemme erikoistuneet suunnittelemaan ja tuottamaan laadukkaita ja
-                        nopeita ratkaisuja yritysten ja yksityisasiakkaiden erityistarpeisiin. Tuotteet suunnitellaan, valmistetaan ja kootaan kotimaisena työnä aina vastaamaan asiakkaan toiveita ja tuotteen käyttötarkoitusta. Käytämme aina mahdollisuuksien salliessa kasvipohjaista ja biohajoavaa, nopeasti uusiutuvaa PLA-muovia! 
+                        Me <b>Printicalilla</b> olemme erikoistuneet suunnittelemaan ja tuottamaan <b>laadukkaita</b> ja
+                        <b>nopeita</b> ratkaisuja yritysten ja yksityisasiakkaiden <b>erityistarpeisiin</b>. Tuotteet suunnitellaan, valmistetaan ja kootaan <b>kotimaisena</b> työnä aina vastaamaan asiakkaan toiveita ja tuotteen käyttötarkoitusta. Käytämme aina mahdollisuuksien salliessa kasvipohjaista ja biohajoavaa, nopeasti uusiutuvaa PLA-muovia! 
                     </p>
                     <Image className='md:ml-10' src={Corn} alt='Corn'/>
                 </div>
                 <div className='md:grid grid-cols-2'>
                     <div>
-                        <h1>Mutta mikä ihmeen 3D-tulostus?</h1>
+                        <h1 className='font-bold'>Mutta mikä ihmeen 3D-tulostus?</h1>
                         <p className='my-10'>
                             3D-tulostus eli "Additive manufacturing" on valmistusmenetelmä, jossa digitaalisesta tiedostosta luodaan valmis tuote pursottamalla ilman fyysistä muottia.
                             Yksittäisen tuotteen valmistaminen on hitaampaa, kuin esimerkiksi ruiskupuristamalla, mutta täysin uuden tuotteen suunnittelu ja valmistaminen voi olla satoja kertoja nopeampaa. 3D-tulostamalla tuote voidaan myös valmistaa monivärisenä ilman erillistä värjäämistä ja saavuttaa kevyitä ja kestäviä rakenteita, jotka on mahdottomia valmistaa muilla menetelmillä.
