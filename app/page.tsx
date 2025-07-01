@@ -1,9 +1,10 @@
 'use client'
 import Image from 'next/image'
-import Placeholder from '/public/printicaltaustakuva.jpg'
+import Banner from '/public/kansikuva.png'
 import FrontText from '/public/teksti etusivu.svg'
 import Navbar from './components/navbar'
 import Skull from '/public/kallo.png'
+import Filaments from '/public/filamentit.png'
 import Link from 'next/link'
 import Materials from '/public/uudensukupolvenmateriaaleja.svg'
 import PrinticalLogo from '/public/printicallogo tumma.svg'
@@ -13,11 +14,11 @@ export default function Home() {
 
       <div className='relative'>
         <Navbar/>
-        <div className='md:mt-20 mt-[65px]'>
+        <div className='md:mt-20 mt-[65px] relative'>
           
-          <Image className='' src={Placeholder} alt="Placeholder"/>
-
-            <Image className='md:mx-10 md:my-10 absolute md:top-[250px] top-20 md:left-[125px]' src={FrontText} alt='FrontText'/>
+          <Image className='' src={Banner} alt="Banner"/>
+            
+          <Image className='absolute bottom-5 md:bottom-0 md:top-[400px] md:left-[350px]' src={FrontText} alt='FrontText'/>
         </div>
           <div className='flex flex-row justify-center mx-4 mt-10 md:mt-10'>
             <Link href="/information">
@@ -43,7 +44,7 @@ export default function Home() {
           </div>
           {/**Desktop */}
           <div className='hidden md:grid grid-cols-3'>
-              <Image src={Skull} alt='Skullplaceholder'/>
+              <Image src={Filaments} alt='Filaments'/>
               <Image className='md:mx-12 md:mt-[200px] my-10' src={Materials} alt='Materials'/>
               <Image src={Skull} alt='Skull'/>
           </div>
@@ -51,7 +52,7 @@ export default function Home() {
           {/**Mobile */}
           <div className='md:hidden'>
             <div className='grid grid-cols-2'>
-              <Image src={Skull} alt='Skullplaceholder'/>
+            <Image src={Filaments} alt='Filaments'/>
               <Image src={Skull} alt='Skull'/>
             </div>
               <Image className='my-10 w-64 mx-auto' src={Materials} alt='Materials'/>
