@@ -5,12 +5,6 @@ import Footer from './components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#ffffff"
-};
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://printical.fi"),
   openGraph: {
