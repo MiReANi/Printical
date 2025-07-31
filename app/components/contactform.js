@@ -34,7 +34,7 @@ export default function ModelForm(){
     }));
     e.preventDefault()
     const data = values
-    const res = await fetch('http://localhost:3000/api', {
+    const res = await fetch('http://printical.fi/api', {
       method: 'POST',
       headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ export default function ModelForm(){
 
   return (
     <form onSubmit={onSubmit}>
-        <div className='md:grid grid-cols-2'>
+        <div className='md:grid grid-cols-2 md:mb-0 mb-5'>
             <div className='ml-auto mr-10 space-y-1'>
                 <p>Nimi*</p>
                 <input type="text" className='rounded-sm md:w-64 md:pl-2' name="name" value={values.name} onChange={handleChange} required/>

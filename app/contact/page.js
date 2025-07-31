@@ -11,9 +11,9 @@ export default function Contact(){
     return(
         <div className='relative'>
             <Navbar/>
-            <div className='mx-20 mt-20 flex flex-col space-y-5 md:p-20'>
+            <div className='lg:mx-20 mx-20 md:mx-5 mt-20 flex flex-col space-y-5 md:p-20'>
                 
-                <div className='md:grid grid-cols-2 gap-[250px] text-center md:text-lg'>
+                <div className='md:grid md:grid-cols-2 lg:gap-[250px] md:gap-[75px] text-center md:text-lg'>
                     <div className='ml-auto'>
                         <Image className='rounded-full ml-9 w-32 h-32 md:h-64 md:w-64 mb-2 md:ml-2' src={TapioPNG} alt="Tapio"></Image>
                         <p>Tapio Heino</p>
@@ -31,7 +31,7 @@ export default function Contact(){
                         </div>
                     </div>
                     <div className='mr-auto mt-6 md:mt-0'>
-                        <Image className='rounded-full ml-9 w-32 h-32 md:h-64 md:w-64 mb-2 md:ml-2' src={KallePNG} alt="Kalle" ></Image>
+                        <Image className='rounded-full ml-9 w-32 h-32 md:h-64 md:w-64 mb-2 md:ml-5' src={KallePNG} alt="Kalle" ></Image>
                         <p>Kalle Kiiltomäki</p>
                         <p>Tuotanto</p>
                         <hr className='my-3'></hr>

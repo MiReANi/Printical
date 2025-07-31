@@ -15,7 +15,7 @@ export default function Info(){
     return (
         <div className='relative'>
             <Navbar/>
-            <div className='mx-5 md:mx-20 mt-20 flex flex-col space-y-5 md:text-lg text-sm'>
+            <div className='mx-5 lg:mx-20 mt-20 flex flex-col space-y-5 md:text-lg text-sm'>
                 <div className='mb-10 md:mt-20'>
                     <p>
                     Onko yritykselläsi kehitteillä <b>uusi tuote?</b><br/>
@@ -25,14 +25,13 @@ export default function Info(){
                     <p>Tahdotko antaa alusta asti <b>räätälöidyn</b>, täysin <b>uniikin lahjan</b> rakkaallesi?</p>
                 </div>
                 <p className='bg-darkblue text-white mr-auto p-1 font-extrabold ml-10 text-4xl'>EI HÄTÄÄ.</p>
-                <div className='md:grid grid-cols-2'>
+                <div className='lg:grid grid-cols-2'>
                     <p className='my-10'>
-                        Me <b>Printicalilla</b> olemme erikoistuneet suunnittelemaan ja tuottamaan <b>laadukkaita</b> ja
-                        <b>nopeita</b> ratkaisuja yritysten ja yksityisasiakkaiden <b>erityistarpeisiin</b>. Tuotteet suunnitellaan, valmistetaan ja kootaan <b>kotimaisena</b> työnä aina vastaamaan asiakkaan toiveita ja tuotteen käyttötarkoitusta. Käytämme aina mahdollisuuksien salliessa kasvipohjaista ja biohajoavaa, nopeasti uusiutuvaa PLA-muovia! 
+                        Me <b>Printicalilla</b> olemme erikoistuneet suunnittelemaan ja tuottamaan <b>laadukkaita</b> ja <b>nopeita</b> ratkaisuja yritysten ja yksityisasiakkaiden <b>erityistarpeisiin</b>. Tuotteet suunnitellaan, valmistetaan ja kootaan <b>kotimaisena</b> työnä aina vastaamaan asiakkaan toiveita ja tuotteen käyttötarkoitusta. Käytämme aina mahdollisuuksien salliessa kasvipohjaista ja biohajoavaa, nopeasti uusiutuvaa PLA-muovia! 
                     </p>
-                    <Image className='md:ml-10' src={Corn} alt='Corn'/>
+                    <Image className='lg:ml-10' src={Corn} alt='Corn'/>
                 </div>
-                <div className='md:grid grid-cols-2'>
+                <div className='lg:grid grid-cols-2'>
                     <div>
                         <h1 className='font-bold'>Mutta mikä ihmeen 3D-tulostus?</h1>
                         <p className='my-10'>
@@ -43,20 +42,20 @@ export default function Info(){
                     <Image className='md:ml-10' src={Dprint} alt='3Dprint'/>
                 </div>
             </div>
-            <div className='md:my-20 my-10'>
+            <div className='lg:my-20 my-10'>
                 <div className='bg-darkblue'>
-                    <div className='flex flex-col md:flex-row md:justify-center md:space-x-20 py-10 mx-5'>
+                    <div className='flex flex-col lg:flex-row lg:justify-center lg:space-x-20 py-10 mx-5'>
 
-                        <Image className='mb-10 md:mb-0' src={Proto} alt='Proto'/>
-                        <Image className='mb-10 md:mb-0' src={Special} alt='Special'/>
+                        <Image className='mb-10 lg:mb-0' src={Proto} alt='Proto'/>
+                        <Image className='mb-10 lg:mb-0' src={Special} alt='Special'/>
                         <Image className='top-0' src={Serial} alt='Serial'/>
 
 
                     </div>
                 </div>
-                <div className='flex flex-col md:flex-row md:justify-center md:space-x-20 py-10 mx-5'>
-                    <Image className='mb-10 md:mb-0' src={TextPro} alt='TextPro'/>
-                    <Image className='mb-10 md:mb-0' src={Gift} alt='Gift'/>
+                <div className='flex flex-col lg:flex-row lg:justify-center lg:space-x-20 py-10 mx-5'>
+                    <Image className='mb-10 lg:mb-0' src={TextPro} alt='TextPro'/>
+                    <Image className='mb-10 lg:mb-0' src={Gift} alt='Gift'/>
                     <Image src={Figures} alt='Figures'/>
 
                 </div>

@@ -4,9 +4,8 @@ import HeaderMobile from 'public/ylapalkki_MOBIILI.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import HomePNG from '/public/etusivu.svg'
-import AboutUs from '/public/ABOUT US.svg'
 import { useState } from 'react'
-import {Home, CircleUserRound} from 'lucide-react'
+import {Home, CircleUserRound, Info} from 'lucide-react'
 
 export default function Nav() {
 
@@ -15,7 +14,7 @@ export default function Nav() {
           
           <div className='lg:hidden block'>
           <Image src={HeaderMobile} alt="HeaderMobile"/>
-          <div className='flex flex-row right-0'>
+          <div className='md:hidden flex flex-row right-0'>
             
             <Link href="/"
             className='absolute top-6 right-[100px]'>
@@ -31,15 +30,33 @@ export default function Nav() {
 
             <Link href="/information"
             className='absolute top-[25px] right-[20px]'>
-            <Image
-            src={AboutUs}
-            alt='AboutUs'
-            width={29}
-            priority
-            />
+            <Info
+            size={32}/>
             </Link>
 
           </div>
+          <div className='hidden md:flex flex-row right-0'>
+            
+            <Link href="/"
+            className='absolute top-12 right-[200px]'>
+              <Home
+              size={64}/>
+            </Link>
+            
+            <Link href="/contact"
+            className='absolute top-12 right-[120px]'>
+            <CircleUserRound
+            size={64}/>
+            </Link>
+
+            <Link href="/information"
+            className='absolute top-12 right-[40px]'>
+            <Info
+            size={64}/>
+            </Link>
+
+          </div>
+          
             
           </div>
     
@@ -67,15 +84,10 @@ export default function Nav() {
             </Link>
 
             <Link href="/information"
-            className='md:absolute md:left-[1250px] top-8'>
-            <Image
-            src={AboutUs}
-            alt='AboutUs'
-            width={61}
-            priority
-            className='ml-2'
-            />
-            <p>About us</p>
+            className='md:absolute md:left-[1250px] top-7'>
+            <Info
+            size={64}/>
+            <p className='text-center'>Info</p>
             </Link>
           </div>
           
