@@ -1,11 +1,11 @@
 'use client'
-import HeaderPNG from '/public/png_osat/ylapalkki_webbi.png'
+import HeaderPNG from '/public/png_osat/ylapalkki.png'
 import HeaderMobile from 'public/ylapalkki_MOBIILI.png'
 import Link from 'next/link'
 import Image from 'next/image'
-import HomePNG from '/public/etusivu.svg'
+import Logo from '/public/png_osat/logo.png'
 import { useState } from 'react'
-import {Home, CircleUserRound, Info} from 'lucide-react'
+import {Home, CircleUserRound, Info, ShoppingBag} from 'lucide-react'
 
 export default function Nav() {
 
@@ -63,32 +63,44 @@ export default function Nav() {
 
           {/* Desktop Menu */}
           <div className='hidden lg:block'>
-            <Image src={HeaderPNG} alt="HeaderPNG"/>
+            <Image className='w-full h-auto' src={HeaderPNG} alt="HeaderPNG"/>
+            <Link href="/">
+              <Image className='absolute top-5 left-7' src={Logo} alt="Logo"/>
+            </Link>
+            <div className='grid grid-cols-2 md:absolute w-full top-7'>
             <div>
-              <Link href="/contact"
-              className='md:absolute md:left-[1100px] top-7'>
-              <CircleUserRound
+
+            </div>
+            <div className='flex flex-row gap-5 ml-8'>
+              <Link href="/">
+              <Home
               size={64}
+              />
+              <p>Etusivu</p>
+              </Link>
+
+              <Link href="/contact">
+              <CircleUserRound
               className='ml-5'
+              size={64}
               />
               <p>Yhteystiedot</p>
               </Link>
-            </div>
-            
-            <Link href="/"
-            className='md:absolute md:left-[1000px] top-7'>
-            <Home
-            size={64}
-            />
-            <p>Etusivu</p>
-            </Link>
 
-            <Link href="/information"
-            className='md:absolute md:left-[1250px] top-7'>
-            <Info
-            size={64}/>
-            <p className='text-center'>Info</p>
-            </Link>
+              <Link href="/information">
+              <Info
+              size={64}/>
+              <p className='text-center'>Info</p>
+              </Link>
+
+              <Link href="https://printicalshop.etsy.com/">
+              <ShoppingBag
+              className='ml-6'
+              size={64}/>
+              <p>Verkkokauppa</p>
+              </Link>
+            </div>
+            </div>
           </div>
           
     </div>

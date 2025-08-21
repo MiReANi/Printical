@@ -14,19 +14,21 @@ export default function Home() {
 
       <div className='relative'>
         <Navbar/>
-        <div className='lg:mt-20 md:mt-[145px] mt-[65px] relative'>
+        <div className='relative lg:mt-20 md:mt-[145px] mt-[65px]'>
           
-          <Image className='' src={Banner} alt="Banner"/>
-            
-          <Image className='absolute bottom-5 md:bottom-0 lg:top-[400px] lg:left-[350px]' src={FrontText} alt='FrontText'/>
+          <Image className='w-full h-auto' src={Banner} alt="Banner"/>
+          <Image className='absolute left-0 right-0 m-auto bottom-2 top-5' src={FrontText} alt='FrontText'/>
+          <Link href="https://printicalshop.etsy.com/">
+            <p className='absolute left-0 right-0 m-auto bottom-12 text-center md:mt-2 text-white hover:text-blue p-2 font-extrabold md:text-2xl lg:text-6xl'>OSTOKSILLE</p>
+          </Link>
         </div>
           <div className='flex flex-row justify-center mx-4 mt-10 md:mt-10'>
             <Link href="/information">
-            <p className='bg-darkblue md:mt-2 text-white p-2 lg:p-10 font-extrabold md:text-2xl lg:text-6xl'>TIETOA MEISTÄ</p>
+            <p className='bg-darkblue hover:bg-blue rounded-xl md:mt-2 text-white p-2 lg:p-10 font-extrabold md:text-2xl lg:text-6xl'>TIETOA MEISTÄ</p>
             </Link>
             <Image className='md:mx-10 mx-2 lg:w-32 w-16' src={PrinticalLogo} alt='PrinticalLogo'/>
             <Link href="/contact">
-            <p className='bg-darkblue md:mt-2 text-white p-2 lg:p-10 font-extrabold md:text-2xl lg:text-6xl'>OTA YHTEYTTÄ</p>
+            <p className='bg-darkblue hover:bg-blue rounded-xl md:mt-2 text-white p-2 lg:p-10 font-extrabold md:text-2xl lg:text-6xl'>OTA YHTEYTTÄ</p>
             </Link>
           </div>
           <div className='mt-10 lg:grid grid-cols-2 bg-darkblue text-sm text-white border-blue md:border-b-4 md:border-t-4'>
@@ -43,10 +45,10 @@ export default function Home() {
 
           </div>
           {/**Desktop */}
-          <div className='hidden lg:grid grid-cols-3'>
-              <Image src={Filaments} alt='Filaments'/>
-              <Image className='lg:mx-12 md:mt-[200px] my-10' src={Materials} alt='Materials'/>
-              <Image src={Skull} alt='Skull'/>
+          <div className='hidden lg:grid grid-cols-3 m-auto'>
+            <Image className='w-full h-auto' src={Filaments} alt='Filaments'/>
+            <Image className='lg:mx-auto my-auto' src={Materials} alt='Materials'/>
+            <Image className='w-full h-auto' src={Skull} alt='Skull'/>
           </div>
 
           {/**Mobile */}

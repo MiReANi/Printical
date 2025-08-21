@@ -27,6 +27,26 @@ export const metadata: Metadata = {
       "application/rss+xml": "https://printical.fi/rss.xml"
     }
   },
+  icons:{
+    icon:[
+      {
+        url: "/icon.svg",
+        type: "image/svg"
+      }
+    ],
+    shortcut:[
+      {
+        url: "/icon.svg",
+        type: "image/svg"
+      }
+    ],
+    apple:[
+      {
+        url: "/apple-icon.svg",
+        type: "image/svg"
+      }
+    ]
+  }
 }
 
 export default function RootLayout({
@@ -36,7 +56,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='lg:bg-printicalBG bg-orange font-rubik tracking-[0.075em]'>{children}<Footer/></body>
+      <body className=' bg-orange font-rubik tracking-[0.075em]'>{children}<Footer/></body>
     </html>
   )
 }
