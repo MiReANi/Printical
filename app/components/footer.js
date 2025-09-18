@@ -10,17 +10,21 @@ export default function Footer(){
                     <p>3509458-8</p>
                     <p>printical.fi@gmail.com</p>
                     <p>+358 440310604</p>
+                    <Link href="https://drive.google.com/file/d/1llbTP7kWIE2SFJjK-S7n-zjjZ9_ZJFG8/view?usp=drive_link"
+                    className='hover:text-blue'>Tietosuojaseloste</Link>
                 </div>
                 <div className='md:ml-10'>
                     <p>Karjalankatu 12</p>
                     <p>28130, Pori</p>
                     <div className='flex flex-row my-5 md:mx-5'>
                         <Link href="https://www.instagram.com/printical.fi/"
+                        className='hover:text-blue'
                         ><Instagram
                         className='mr-2'
                         size={32}/>
                         </Link>
                         <Link href="https://www.facebook.com/profile.php?id=61574020655204"
+                        className='hover:text-blue'
                         ><Facebook
                         size={32}/>
                         </Link>
