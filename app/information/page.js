@@ -16,8 +16,8 @@ export default function Info(){
     return (
         <div className='relative'>
             <Navbar/>
-            <div className='mx-5 lg:mx-20 mt-20 flex flex-col lg:grid grid-cols-2 gap-8 space-y-5 md:text-lg text-sm'>
-                <div>
+            <div className='mx-5 md:mx-20 lg:mx-20 mt-20 flex flex-col lg:grid grid-cols-2 gap-8 space-y-5 md:text-lg text-sm'>
+                <div className='md:mt-10 lg:mt-0'>
                     <div className='mb-10 md:mt-20'>
                         <p>
                         Onko yritykselläsi kehitteillä <b>uusi tuote?</b><br/>

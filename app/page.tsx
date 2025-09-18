@@ -19,10 +19,10 @@ export default function Home() {
           <Image className='w-full h-auto' src={Banner} alt="Banner"/>
           <Image className='absolute left-0 right-0 m-auto bottom-2 top-5' src={FrontText} alt='FrontText'/>
           <Link href="https://printicalshop.etsy.com/">
-            <p className='absolute left-0 right-0 m-auto bottom-12 text-center md:mt-2 text-white hover:text-blue p-2 font-extrabold md:text-2xl lg:text-6xl'>OSTOKSILLE</p>
+            <p className='absolute left-0 right-0 m-auto md:bottom-12 text-center md:mt-2 text-white hover:text-blue p-2 font-extrabold text-2xl md:text-4xl lg:text-6xl'>OSTOKSILLE</p>
           </Link>
         </div>
-          <div className='flex flex-row justify-center mx-4 mt-10 md:mt-10'>
+          <div className='flex flex-row justify-center mx-4 mt-12 md:mt-10'>
             <Link href="/information">
             <p className='bg-darkblue hover:bg-blue rounded-xl md:mt-2 text-white p-2 lg:p-10 font-extrabold md:text-2xl lg:text-6xl'>TIETOA MEISTÄ</p>
             </Link>
