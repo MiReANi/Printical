@@ -34,7 +34,7 @@ export default function ModelForm(){
     }));
     e.preventDefault()
     const data = values
-    const res = await fetch('http://localhost:3000/api', {
+    const res = await fetch('http://printical.fi/api', {
       method: 'POST',
       headers: {
           "Content-Type": "application/json",
